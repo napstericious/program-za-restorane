@@ -1,0 +1,21 @@
+﻿<Page x:Class="WPF_RegisterLoginWelcome.Welcome"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"       
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_RegisterLoginWelcome"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="900"
+      Title="Welcome">
+
+    <Grid>
+        <Border CornerRadius="10" Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="LightSeaGreen" Offset="0.0"/>
+                    <GradientStop Color="#FF2FECE1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+    </Grid>
+</Page>

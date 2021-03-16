@@ -1,0 +1,27 @@
+﻿<Window x:Class="WPF_RegisterLoginWelcome.KesKartica"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_RegisterLoginWelcome"
+        mc:Ignorable="d"
+        Title="KesKartica" Height="200" Width="400" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid Background="WhiteSmoke">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Viewbox Height="40">
+            <RadioButton x:Name="RadioKes" Content="Keš" HorizontalAlignment="Center" GroupName="kesKartica" IsChecked="True" VerticalAlignment="Center"/>            
+        </Viewbox>
+        <Viewbox Height="40" Grid.Column="1">
+            <RadioButton  x:Name="RadioKartica" Content="Kartica" HorizontalAlignment="Center" GroupName="kesKartica" VerticalAlignment="Center"/>
+        </Viewbox>
+        <Button x:Name="BtnOK" Content="OK" Grid.Row="1" Background="CornflowerBlue" Foreground="White" Click="BtnOK_Click" Margin="10"/>
+        <Button x:Name="BtnCancel" Content="Cancel" Grid.Column="1" Grid.Row="1" Margin="10" Background="CornflowerBlue" Foreground="White" Click="BtnCancel_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,54 @@
+﻿<Window x:Class="WPF_RegisterLoginWelcome.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:WPF_RegisterLoginWelcome"
+        mc:Ignorable="d"
+        Title="AcinaAplikacija" Height="600" Width="1100" Name="HomePage" WindowStartupLocation="CenterOwner" Background="AliceBlue">
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="510*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" x:Name="GridContainer" Margin="5" MinHeight="480" MinWidth="800" >
+                <Frame x:Name="Container" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="auto" NavigationUIVisibility="Hidden"/>
+            </Grid>
+            <Border Border.Background="LightSeaGreen">
+                <Grid x:Name="GridLeftContainer">
+                    <StackPanel x:Name="SPPorudzbine" Orientation="Vertical" VerticalAlignment="Top" Margin="0 10 0 0">
+
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+        <Border Grid.RowSpan="1" Background="LightSeaGreen">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BtnMainLogin" Content="Login" Grid.Column="6" Style="{StaticResource BtnNav}" Click="BtnMainLogin_Click"/>
+                <Button x:Name="BtnPorudzbina" Content="Porudžbina" Style="{StaticResource BtnNav}" Click="BtnPorudzbina_Click" Visibility="Collapsed"/>
+                <Button x:Name="BtnRacun" Content="Račun" Grid.Column="1" Style="{StaticResource BtnNav}" Click="BtnRacun_Click" Visibility="Collapsed"/>
+                <Button x:Name="BtnArtikli" Content="Artikli" Grid.Column="2" Style="{StaticResource BtnNav}" Click="BtnArtikli_Click" Visibility="Collapsed"/>
+                <Button x:Name="BtnMainLogout" Content="Logout" Grid.Column="6" Style="{StaticResource BtnNav}" Click="BtnMainLogout_Click" Visibility="Collapsed"/>
+                <StackPanel Orientation="Vertical" Grid.Column="4" Grid.ColumnSpan="2" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <TextBlock x:Name="TBUlogovanKorisnik" Text="Za pristup aplikaciji se morate ulogovati"  FontFamily="Helvetica" FontSize="16" TextWrapping="Wrap" Foreground="White"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>

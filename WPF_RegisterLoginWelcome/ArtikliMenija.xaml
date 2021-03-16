@@ -1,0 +1,59 @@
+﻿<Page x:Class="WPF_RegisterLoginWelcome.Artikli"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_RegisterLoginWelcome"
+      mc:Ignorable="d" 
+      MinHeight="500" MinWidth="900" Height="auto" Width="auto"
+      Title="ArtikliMenija">
+
+    <Grid Background="LightSeaGreen">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="65*"/>
+                <ColumnDefinition Width="35*"/>
+                <ColumnDefinition Width="35*"/>
+                <ColumnDefinition Width="35*"/>
+                <ColumnDefinition Width="65*"/>
+            </Grid.ColumnDefinitions>
+            <Border VerticalAlignment="Top" Margin="0 8 0 0">
+                <Image x:Name="ImgMenu" Source="/Slike/ikonice/BeleIkonice/menu-card.png" Opacity="1"  Cursor="Hand" Width="95" Height="95"/>
+            </Border>
+            <Border Grid.Column="1" Margin="0 8 0 0">
+                <StackPanel Orientation="Vertical">
+                    <Image x:Name="ImgHrana" Source="/Slike/ikonice/BeleIkonice/dish.png" Opacity=".6"  Cursor="Hand" Width="95" Height="95"/>
+                    <TextBlock x:Name="TBHrana" Text="Hrana" HorizontalAlignment="Center" FontFamily="Helvetica" Foreground="White"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="2" Margin="0 8 0 0">
+                <StackPanel Orientation="Vertical">
+                    <Image x:Name="ImgPitje" Source="/Slike/ikonice/BeleIkonice/wine.png"  Width="95" Opacity=".6" Cursor="Hand" Height="95"/>
+                    <TextBlock x:Name="TBPitja" Text="Pića" HorizontalAlignment="Center" FontFamily="Helvetica" Foreground="White"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="3" Margin="0 8 0 0">
+                <StackPanel Orientation="Vertical">
+                    <Image x:Name="ImgDezert" Source="/Slike/ikonice/BeleIkonice/cupcake-with-cherry-center.png"  Width="95" Opacity=".6" Cursor="Hand" Height="95"/>
+                    <TextBlock x:Name="TBDezert" Text="Dezert" HorizontalAlignment="Center" FontFamily="Helvetica" Foreground="White"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="4" VerticalAlignment="Top" Margin="0 8 0 0">
+                <Image x:Name="ImgOpen" Source="/Slike/ikonice/BeleIkonice/open-sign.png"  Width="95" Opacity="1" Height="95"/>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel x:Name="PodMeni" Orientation="Horizontal" HorizontalAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Auto" Cursor="Hand"/>            
+        </Grid>
+        
+        <WrapPanel x:Name="WrapArtikli" Grid.Row="2">
+            
+        </WrapPanel>
+        
+    </Grid>
+</Page>

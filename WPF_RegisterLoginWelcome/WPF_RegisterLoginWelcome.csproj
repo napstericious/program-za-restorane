@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60BFA910-5C41-4841-B9F7-1CD434D8F2AC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WPF_RegisterLoginWelcome</RootNamespace>
+    <AssemblyName>WPF_RegisterLoginWelcome</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialDesignColors, Version=1.2.2.920, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.2.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=3.0.1.920, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.3.0.1\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ArtikliMenija.xaml.cs">
+      <DependentUpon>ArtikliMenija.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KesKartica.xaml.cs">
+      <DependentUpon>KesKartica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Artikl.cs" />
+    <Compile Include="Models\ArtikliPodmenija.cs" />
+    <Compile Include="Registracija.xaml.cs">
+      <DependentUpon>Registracija.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.xaml.cs">
+      <DependentUpon>Welcome.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ArtikliMenija.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KesKartica.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Korisnik.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Registracija.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Welcome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Slike\ikonice\burger-13-2-512.webp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Slike\Pitja\lemonade.jpg" />
+    <Resource Include="Slike\Pitja\Kafa.jpg" />
+    <Resource Include="Slike\Pitja\Latte.jpg" />
+    <Resource Include="Slike\Latte.jpg.jpg" />
+    <Resource Include="Slike\ikonice\PicaPNG\cofee-cup-white-doodle.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\coffee-cup-doodle.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\tea-bag.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\cupcake-with-cherry-center.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\lemonade-with-straw.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\hot-mug-doodle.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\armagnac.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\beer-1.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\beer-2.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\beer-3.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\beer.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\bloody-mary-1.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\bloody-mary.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\blue-lagoon.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\brandy.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\champagne-1.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\champagne-2.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\champagne.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\cocktail-1.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\cocktail.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\cognac.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\mai-tai.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\malibu.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\manhattan.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\margarita-1.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\margarita-2.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\margarita.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\martini.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\mojito.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\pia-colada.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\pink-rose.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\rum.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\sex-on-the-beach.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\tequila-sunrise.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\whiskey.png" />
+    <Resource Include="Slike\ikonice\PicaPNG\wine.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\appetizers-bowl.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\apple-with-skin.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\bakery-croissant.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\beef-chop.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\big-knife.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\bistro-pot.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\boiling-water-pan.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\bowl-of-olives.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\breakfast-cup.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\butcher-knife.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\cake-box.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\cake-piece-with-cream.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\candy-balls.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\cardboard-cup-doodle.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\chef-hat.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\chicken-thigh.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\chinese-rice-with-two-chopsticks.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\closed-sign.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\cocktail-glass-with-ice-cube.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\coffe-pot.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\combine-meal-1.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\combine-meal.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\complete-hamburger.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\creme-caramel.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\crepe-and-cream.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\cup-doodle.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\cupcake-with-cherry.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\cupcake-with-cream.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\cut-cake-piece.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\cutting-board-with-knife.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\decorated-cake.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\dish.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\drink-jar.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\electric-weight-scale.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\foamy-beer-jar.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\food-box.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\french-fries-box.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\fresh-tomato.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\fried-chicken-thighs.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\frying-pan-from-top.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\frying-pan-without-a-cover.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\frying-pan.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\half-lemon-doodle.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\hot-dog-with-ketchup.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\hot-mug-doodle.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\hot-soup.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\ice-cream-balls-cup.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\ice-cream-cup-doodle.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\ice-pop.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\infusion-bag.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\jar-full-of-food.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\kitchen-fish.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\ladle-doodle.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\lateral-pan.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\lemonade-with-straw.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\load-of-bread.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\long-sandwich.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\manual-mixer-doodle.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\measurement-jar-doodle.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\menu-card.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\mermelade-jar-doodle.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\mermelade-tin.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\mexican-food.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\milk-brick.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\mortar-with-mace.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\nachos-plate.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\open-menu.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\open-sign.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\open-tin-with-spoon.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\paella-with-parwns.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\pepperoni-pizza-slice.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\pepperoni-pizza.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\piece-of-cheese.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\pita-bread.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\plate-of-spaghetti.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\pot-with-cover.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\pouring-coffe.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\restaurant-fried-egg.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\rolling-pin.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\round-plate.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\salad-fork.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\salt-shaker.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\soup-spoon.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\spaghetti-bolognese.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\spatula-utensil.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\strainer-with-handle.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\strawberry-drawing.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\sushi-mix.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\sushi-piece.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\tea-set.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\thin-knife.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\three-levels-cake.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\toasted-bread.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\tray-and-cover.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\two-balls-ice-cream-cone.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\two-brochettes.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\two-cherries.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\vintage-teapot.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\watermellon-slice.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\wide-glass.png" />
+    <Resource Include="Slike\ikonice\HranaPNG\yogurt-with-spoon.png" />
+    <Resource Include="Slike\hrana\45365936-delicious-seafood-pizza-on-a-wooden-textured-table.jpg" />
+    <Resource Include="Slike\hrana\BBQ-Chicken-Wings-3.jpg" />
+    <Resource Include="Slike\hrana\best-bbq-joints-in-every-state-1561394341.jpg" />
+    <Resource Include="Slike\hrana\dark-plate-with-italian-spaghetti-dark_1220-2752.jpg" />
+    <Resource Include="Slike\hrana\dpz-dominos-pizza-stock.jpg" />
+    <Resource Include="Slike\hrana\stovetop-macaroni-cheese-1.jpg" />
+    <Resource Include="Slike\hrana\Weekend-BBQ-by-the-Pool-at-Tosca-DoubleTree-by-Hilton-Kuala-Lumpur.jpg" />
+    <Resource Include="Slike\ikonice\06-FOOD-READY_taco-512.png" />
+    <Resource Include="Slike\ikonice\180602.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\VocneSalate.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\SlatkaPeciva.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Piva.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Torte.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Kolaci.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Vina.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\closed-sign.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Kafe.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\coffee-cup-doodle.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Burgeri.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Palacinke.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\cupcake-with-cherry-center.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Mafini.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\decorated-cake.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\dish.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\ice-cream-balls-cup.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Sladoled.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Cajevi.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Sokovi.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Sendvici.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\menu-card.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Salate.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\open-sign.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Pice.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Zestina.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\Paste.png" />
+    <Resource Include="Slike\ikonice\BeleIkonice\wine.png" />
+    <Resource Include="Slike\DeleteDugme.png" />
+    <Content Include="Slike\ikonice\hrana.png" />
+    <Resource Include="Slike\ikonice\Food.png" />
+    <Resource Include="Slike\ikonice\a19742d122924a03bfe9ee46ce39ac42-sushi-icon-sticks-by-vexels.png" />
+    <Resource Include="Slike\ikonice\Camping-grill-grilled-roasted-toasty-satay-sausage-512.png" />
+    <Resource Include="Slike\ikonice\Cultures-Sushi-icon.png" />
+    <Resource Include="Slike\ikonice\eff4df42e763ab46146e1dc590b386f6-whole-pizza-icon-by-vexels.png" />
+    <Resource Include="Slike\ikonice\pitje.png" />
+    <Resource Include="Slike\ikonice\food_cooking_meal_7-512.png" />
+    <Resource Include="Slike\ikonice\Wine.png" />
+    <Resource Include="Slike\ikonice\pancake.png" />
+    <Resource Include="Slike\ikonice\spaghetti-food-pasta-italian-512.png" />
+    <Resource Include="Slike\ikonice\Sushi-outline-128x128-02-512.png" />
+    <Resource Include="Slike\Pitja\Jegger.jpg" />
+    <Resource Include="Slike\Pitja\425196.jpg" />
+    <Resource Include="Slike\Pitja\8826192527390.png" />
+    <Resource Include="Slike\Pitja\amstel-0-33l-1000271-large.jpg" />
+    <Resource Include="Slike\Pitja\bavaria-0-25l-1005672-large.jpg" />
+    <Resource Include="Slike\Pitja\beck-s-0-33l-1000274-large.jpg" />
+    <Resource Include="Slike\Pitja\carlsberg-0-33l-1007972-large.jpg" />
+    <Resource Include="Slike\Pitja\corona-extra-0-35l-1007925-large.jpg" />
+    <Resource Include="Slike\Pitja\erdinger-0-33l-1006044-large.jpg" />
+    <Resource Include="Slike\Pitja\erdinger-0-5l-1006042-large.jpg" />
+    <Resource Include="Slike\Pitja\ginger-beard-4-2-0-5l-1011158-large.jpg" />
+    <Resource Include="Slike\Pitja\Guinness.jpg" />
+    <Resource Include="Slike\Pitja\jelen-0-33l-1000285-large.jpg" />
+    <Resource Include="Slike\Pitja\jelen-nefiltrirano-0-33l-1008451-large.jpg" />
+    <Resource Include="Slike\Pitja\lav-premium-0-33l-1011069-large.jpg" />
+    <Resource Include="Slike\Pitja\leffe-0-33l-1008027-large.jpg" />
+    <Resource Include="Slike\Pitja\niksicko-0-33l-1004851-large.jpg" />
+    <Resource Include="Slike\Pitja\niksicko-ipa-0-33l-1011291-large.jpg" />
+    <Resource Include="Slike\Pitja\Pelinkovac.jpg" />
+    <Resource Include="Slike\Pitja\tuborg-green-0-5l-1000331-large.jpg" />
+    <Resource Include="Slike\Pitja\viski-jack-daniels-0-7l-1004389-large.jpg" />
+    <Resource Include="Slike\Pitja\zajecarsko-0-33l-1007973-large.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>
